@@ -1,0 +1,80 @@
+print("Wellcome to quiz game !")
+print('!! NOTE: if your spelling is incorrect then it is considered as wrong answer')
+score = 0
+question_no = 0
+playing = input('Do you want to play ? ').lower()
+if playing == 'yes':
+    question_no += 1
+    ques = input(f'\n{question_no}. which country won 2023 cricket world cup? ').lower()
+    if ques == 'australia':
+        score +=1
+        print('correct! you got 1 point')
+        
+    else:
+        print('Incorrect!')
+        print(f'current answer is --> australia')
+
+# ------1
+    question_no += 1
+    ques = input(f'\n{question_no}. what does GUI stand for? ').lower()
+    
+    if ques == 'graphical user interface':
+        score +=1
+        print('correct! you got 1 point')
+        
+    else:
+        print('Incorrect!')
+        print(f'current answer is --> graphical user interface')
+
+# -----2
+    question_no += 1
+    ques = input(f'\n{question_no}. Who is the father of AI? ').lower()
+    
+    if ques == 'john mccarthy':
+        score +=1
+        print('correct! you got 1 point')
+        
+    else:
+        print('Incorrect!')
+        print(f'current answer is --> john mccarthy')
+
+# -----3
+    question_no += 1
+    ques = input(f'\n{question_no}. What is the full form of MCQ?  ').lower()
+    
+    if ques == 'multiple choice quetions':
+        score +=1
+        print('correct! you got 1 point')
+        
+    else:
+        print('Incorrect!')
+        print(f'current answer is --> multiple choice quetions')
+
+
+# -----4
+    question_no += 1
+    ques = input(f'\n{question_no}. what does ROM stand for? ').lower()
+    
+    if ques == 'read only memory':
+        score +=1
+        print('correct! you got 1 point')
+        
+    else:
+        print('Incorrect!')
+        print(f'current answer is --> read only memory')
+
+
+# ------5 
+
+else:
+    print('thankyou you are out of a game.')
+    quit()
+
+print(f'\nnumber of question is {question_no}')
+print(f'your score is {score}')
+try:
+    percentage = (score *100)/question_no
+except ZeroDivisionError:
+    print('0% quetions are correct')
+
+print(f'{percentage}% questions are correct.')
